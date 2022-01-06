@@ -91,7 +91,7 @@ function main() {
 
     git
         .addConfig('user.name', process.env.GIT_NAME)
-        .addConfig('user.token', process.env.GIT_TOKEN)
+        .addConfig('user.email', process.env.GIT_EMAIL)
         .checkIsRepo()
         .then(isRepo => !isRepo && initialiseRepo(git))
         .then(() => git.fetch())
